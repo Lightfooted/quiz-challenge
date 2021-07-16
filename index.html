@@ -12,23 +12,26 @@
 <body>
   <h1>Lightfooted Code Quiz</h1>
 
-  <div id="score">High Score</div>
-  <div id="timer">No pressure but... you're being timed!</div>
+  <div id="score"></div>
+  <div>No pressure but... you're being timed! You have <span id="timer">05:00</span> minutes left!</div>
 
-    <p>Question1</p>
-      <button id="submit">Option1</button>
-      <button id="submit">Option2</button>
-    <p>Question2</p>
-      <button id="submit">Option1</button>
-      <button id="submit">Option2</button>
-    <p>Question3</p>
-      <button id="submit">Option1</button>
-      <button id="submit">Option2</button>
+  <div id="questions">
+
+    <p>How do you write a hidden comment in Javascript?</p>
+      <button id="submit">!-- --!</button>
+      <button id="submit">//</button>
+    <p>What does border-radius do?</p>
+      <button id="submit">Rounds the corners of the border.</button>
+      <button id="submit">Increases the width of the border.</button>
+    <p>In HTML what is the proper tag name for adding images?</p>
+      <button id="submit">pic</button>
+      <button id="submit">img</button>
     <p>Question4</p>
       <button id="submit">Option1</button>
       <button id="submit">Option2</button>
+  </div>
 
-  <div id="results">Correct!</div>
+  <div id="results"></div>
 
   <script src="./assets/js/script.js"></script>
 </body>
