@@ -4,7 +4,33 @@ body{
 	color: black;
 }
 
-#submit{
+h1{
+    text-align: center;
+}
+/*Need to research more on making option1 and option2 not so wide*/
+#option1{
+    display: flex;
+    justify-content: center;
+}
+
+#option2{
+    display: flex;
+    justify-content: center;
+}
+
+#questionBox{
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.stop-watch{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.options ul li{
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 20px;
 	background-color:purple;
@@ -16,11 +42,41 @@ body{
 	margin-bottom: 10px;
 }
 
-#submit:hover{
-	background-color:magenta;
+.options ul li:hover{
+    background-color: magenta;
 }
 
-p{
-    font-style: italic;
+.lf-quiz .options ul li.correct{
+    background-color:pink;
+}
+
+.lf-quiz .options ul li.wrong{
+    background-color:black;
+}
+
+.lf-quiz .score {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    border: 2px solid black;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.next{
+    display:flex;
+    justify-content: center;
+}
+
+#btnNext{
+    background-color: purple;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    height: 40px;
+}
+
+.lf-quiz .score .score-card{
+    line-height: 30px;
+    font-size: 20px;
 }

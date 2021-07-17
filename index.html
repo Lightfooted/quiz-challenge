@@ -10,30 +10,35 @@
 </head>
 
 <body>
-  <h1>Lightfooted Code Quiz</h1>
+    <h1>Lightfooted Code Quiz</h1>
+    
+    <div class="stop-watch">You have <span id="timer">02:00</span> minutes left!</div>
 
-  <div id="score"></div>
-  <div>No pressure but... you're being timed! You have <span id="timer">05:00</span> minutes left!</div>
+    <div class="lf-quiz">
+        
+        <div class="score">
+            <div class="score-card">
+                High Score: <span id="scoreCard">0</span>
+            </div>
+        </div>
 
-  <div id="questions">
+        <div id="questionBox" class="question"></div>
+        <div class="options">
+            <ul id="ul">
+                <li id="option1" onclick="button(this)"></li>
+                <li id="option2" onclick="button(this)"></li>
+            </ul>
+        </div>
 
-    <p>How do you write a hidden comment in Javascript?</p>
-      <button id="submit">!-- --!</button>
-      <button id="submit">//</button>
-    <p>What does border-radius do?</p>
-      <button id="submit">Rounds the corners of the border.</button>
-      <button id="submit">Increases the width of the border.</button>
-    <p>In HTML what is the proper tag name for adding images?</p>
-      <button id="submit">pic</button>
-      <button id="submit">img</button>
-    <p>What does an Array do?</p>
-      <button id="submit">Holds multiple values into a single variable.</button>
-      <button id="submit">Assigns values to variables.</button>
-  </div>
+        <div class="next">
+            <button id="btnNext" type="button" onclick="next()">
+            Continue
+            </button>
+        </div>
 
-  <div id="results"></div>
+    </div>
 
-  <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>
