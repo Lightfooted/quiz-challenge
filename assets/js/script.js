@@ -1,9 +1,11 @@
+var begin = document.getElementById('start');
 var ul = document.getElementById('ul')
 var nextButton = document.getElementById('btnNext');
 var quizbox = document.getElementById('questionBox')
 var option1 = document.getElementById('option1')
 var option2 = document.getElementById('option2')
-
+var twoMinutes = 60 * 2,
+        display = document.querySelector('#timer');
 var quiz={
 
     questions:[
@@ -78,7 +80,11 @@ var quiz={
     }
 }
 
-window.load=quiz.load();
+//window.load=quiz.load();
+function startQuiz(){
+    timerCount(twoMinutes, display);
+    quiz.load()
+}
 
 function button(ele){
     quiz.check(ele);
@@ -89,7 +95,6 @@ function next(){
     quiz.next();
     quiz.allowClick();
 }
-
 //Added countdown timer. Need to figure out how to subtract with wrong answers.
 
 function timerCount(duration, display) {
@@ -109,10 +114,10 @@ function timerCount(duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
-    var twoMinutes = 60 * 2,
-        display = document.querySelector('#timer');
-    timerCount(twoMinutes, display);
-};
-
+// window.onload = function () {
+//     var twoMinutes = 60 * 2,
+//         display = document.querySelector('#timer');
+//     timerCount(twoMinutes, display);
+// };
+begin.addEventListener("click", startQuiz);
 //Empty space to play with user initial input. Must add!
