@@ -1,11 +1,12 @@
-var begin = document.getElementById('start');
+var begin = document.getElementById('startBtn');
 var ul = document.getElementById('ul')
 var nextButton = document.getElementById('btnNext');
 var quizbox = document.getElementById('questionBox')
 var option1 = document.getElementById('option1')
 var option2 = document.getElementById('option2')
 var twoMinutes = 60 * 2,
-        display = document.querySelector('#timer');
+    display = document.querySelector('#timer');
+
 var quiz={
 
     questions:[
@@ -109,7 +110,7 @@ function timerCount(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            clearInterval(timeinterval);
         }
     }, 1000);
 }
