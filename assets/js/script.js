@@ -100,7 +100,7 @@ function next(){
 
 function timerCount(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var counter = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -109,16 +109,13 @@ function timerCount(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            clearInterval(timeinterval);
+        timer--
+
+        if (timer < 0) {
+            clearInterval(counter);
         }
     }, 1000);
 }
 
-// window.onload = function () {
-//     var twoMinutes = 60 * 2,
-//         display = document.querySelector('#timer');
-//     timerCount(twoMinutes, display);
-// };
 begin.addEventListener("click", startQuiz);
 //Empty space to play with user initial input. Must add!

@@ -7,7 +7,12 @@ body{
 h1{
     text-align: center;
 }
-/*Need to research more on making option1 and option2 not so wide*/
+
+#ul{
+    width: 70%;
+    margin: auto;
+}
+
 #option1{
     display: flex;
     justify-content: center;
