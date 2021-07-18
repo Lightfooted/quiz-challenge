@@ -13,6 +13,12 @@ h1{
     margin: auto;
 }
 
+button#startBtn {
+    border-radius: 10px;
+    height:max-content;
+    width: 5%;
+}
+
 #option1{
     display: flex;
     justify-content: center;
