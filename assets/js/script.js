@@ -1,3 +1,4 @@
+var userInitials = []; //user initial storage
 var begin = document.getElementById('startBtn');
 var ul = document.getElementById('ul')
 var nextButton = document.getElementById('btnNext');
@@ -81,7 +82,6 @@ var quiz={
     }
 }
 
-//window.load=quiz.load();
 function startQuiz(){
     timerCount(twoMinutes, display);
     quiz.load()
@@ -117,5 +117,8 @@ function timerCount(duration, display) {
     }, 1000);
 }
 
+var saveInitials = function() {
+    localStorage.setItem("initials", JSON.stringify(userInitials));
+}
+
 begin.addEventListener("click", startQuiz);
-//Empty space to play with user initial input. Must add!
